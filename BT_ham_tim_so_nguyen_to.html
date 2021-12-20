@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố</title>
+</head>
+<body>
+<script>
+    function songuyento(number){
+        laNguyento=true;
+        if (number<2) {
+            laNguyento=false;
+        }else {
+            for(let i=2;i<number;i++){
+                if (number%i===0){
+                    laNguyento=false;
+                }
+            }
+        }
+       return laNguyento;
+    }
+    let j=0
+    document.write("Các số nguyên tố nhỏ hơn 10000 là: ")
+    while (j<10000) {
+        if (songuyento(j) === true) {
+            document.write(j+"," )
+        }
+        j++;
+    }
+</script>
+</body>
+</html>
